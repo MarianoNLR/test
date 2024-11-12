@@ -35,12 +35,23 @@ app.include_router(workers.router)
 app.mount("/static", StaticFiles(directory=os.path.join(os.path.dirname(__file__), "../web")), name="static")
 
 # Directorio de plantillas (HTML dinámico)
-templates = Jinja2Templates(directory="web")
+templates = Jinja2Templates(directory=os.path.join(os.path.dirname(__file__), "../web"))
 
 @app.get("/")
 async def read_index(request: Request):
     # Puedes pasar datos dinámicos al template
     return templates.TemplateResponse("index3.html", {"request": request, "message": "Bienvenido a Spa Sentirse Bien"})
+
+@app.get("/login")
+async def read_login(request: Request):
+    # Renderiza la página de login
+    return templates.TemplateResponse("login.html", {"request": request, "message": "Inicia sesión"})
+
+@app.get("/cliente")
+async def read_login(request: Request):
+    # Renderiza la página de login
+    return templates.TemplateResponse("cliente.html", {"request": request, "message": "Cliente"})
+
 
 def main():
     import uvicorn

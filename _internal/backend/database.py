@@ -45,10 +45,11 @@
 #         if conn:
 #             conn.close()
 import sqlite3
-
+import os
 # Configuración de la base de datos SQLite
-DATABASE_PATH = "spa_db.sqlite"  # Asegúrate de que la ruta sea correcta
-
+#DATABASE_PATH = "spa_db.sqlite"  # Asegúrate de que la ruta sea correcta
+BASEDIR = os.path.dirname(os.path.abspath(__file__))
+DATABASE_PATH = os.path.join(BASEDIR, "spa_db.sqlite")
 # Crear la conexión a la base de datos
 def get_db_connection():
     conn = sqlite3.connect(DATABASE_PATH)

@@ -36,7 +36,7 @@ class Requests:
     def authenticate_client(login_request: LoginRequest):
         email = login_request.email
         password = login_request.password
-
+        print('xd', email, password)
         try:
             conn = get_db_connection()
             cursor = conn.cursor()
@@ -49,14 +49,14 @@ class Requests:
             """
             cursor.execute(query, (email, email))
             client = cursor.fetchone()
-
+            print(client)
             # Verificación de credenciales
             if client is None or password != client[3]:
                 raise CredentialsException()
 
             # Crear token de acceso
             access_token = create_access_token(data={"sub": email, "id": client[0], "rol": client[4]})
-
+            print(access_token)
             return {
                 "access_token": access_token,
                 "token_type": "bearer",

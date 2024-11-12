@@ -31,15 +31,15 @@ if (loginForm) {
             // Redirigir al usuario según su rol
             const userRole = data.rol;
             const redirectMap = {
-                'cliente': 'cliente.html',
-                'secretaria': 'secretaria.html',
-                'duena': 'duena.html',
-                'masajista': 'masajista.html'
+                'cliente': 'cliente',
+                'secretaria': 'secretaria',
+                'duena': 'duena',
+                'masajista': 'masajista'
             };
 
             window.location.href = redirectMap[userRole] || 'login.html';
         } catch (error) {
-            mostrarError(errorElemento, error.message);
+            console.log(errorElemento, error.message);
         }
     });
 }

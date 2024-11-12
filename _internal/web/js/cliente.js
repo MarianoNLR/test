@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const tableBody = document.querySelector('#reservas-table tbody');
         tableBody.innerHTML = reservas.map(reserva => `
             <tr>
+                <td>${reserva.reserva_id}</td>
                 <td>${reserva.servicio_id}</td>
                 <td>${new Date(reserva.fecha).toLocaleDateString()}</td>
                 <td>${reserva.cliente_id}</td>

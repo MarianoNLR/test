@@ -525,6 +525,7 @@ def get_reservas_by_cliente(cliente_id: int):
         reservas = []
         for row in rows:
             reservas.append({
+                "reserva_id": row[0],
                 "cliente_id": row[1],
                 "servicio_id": row[2],
                 "fecha": row[3],

@@ -1,9 +1,9 @@
 // cliente.js (optimizado)
 
 // Base URL de la API (ajusta según el entorno de producción si es necesario)
-const BASE_URL = 'http://127.0.0.1:8000/client'; // Cambia '127.0.0.1' según la IP o el dominio en producción
-const BASE_URL2= 'http://127.0.0.1:8000/reservas'
-const BASE_URL3= 'http://127.0.0.1:8000/reservas2'
+const BASE_URL = 'https://test-rvwm.onrender.com/client'; // Cambia '127.0.0.1' según la IP o el dominio en producción
+const BASE_URL2= 'https://test-rvwm.onrender.com/reservas'
+const BASE_URL3= 'https://test-rvwm.onrender.com/reservas2'
 // Función para mostrar mensajes de error
 function mostrarError(elemento, mensaje) {
     elemento.innerText = mensaje;

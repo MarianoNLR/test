@@ -1,6 +1,6 @@
 // auth.js
 
-const BASE_URL = 'http://127.0.0.1:8000/auth';
+const BASE_URL = 'https://test-rvwm.onrender.com/auth';
 
 // Manejo del formulario de login
 const loginForm = document.getElementById('login-form');

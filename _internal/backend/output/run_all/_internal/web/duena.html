@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dueña - Spa Sentirse Bien</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de la Dueña</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#reservas">Ver Reservas</a></li>
+            <li><a href="#clientes">Listado de Clientes</a></li>
+            <li><a href="#empleados">Gestión de Empleados</a></li>
+            <li><a href="#informes">Generar Informes</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de Reservas -->
+    <section id="reservas">
+        <h2>Ver Todas las Reservas</h2>
+        <table id="reservas-table">
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Servicio</th>
+                    <th>Fecha</th>
+                    <th>Profesional</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las reservas se cargarán aquí -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Sección de Clientes -->
+    <section id="clientes">
+        <h2>Listado de Clientes</h2>
+        <ul id="clientes-list">
+            <!-- Lista de clientes -->
+        </ul>
+    </section>
+
+    <!-- Sección de Gestión de Empleados -->
+    <section id="empleados">
+        <h2>Gestión de Empleados</h2>
+
+        <!-- Formulario para crear nuevo empleado -->
+        <h3>Crear Empleado</h3>
+        <form id="crear-empleado-form">
+            <label for="nombre-empleado">Nombre del Empleado:</label>
+            <input type="text" id="nombre-empleado" name="nombre-empleado" required>
+
+            <label for="email-empleado">Correo Electrónico:</label>
+            <input type="email" id="email-empleado" name="email-empleado" required>
+
+            <label for="rol-empleado">Rol:</label>
+            <select id="rol-empleado" name="rol-empleado">
+                <option value="masajista">Masajista</option>
+                <option value="secretaria">Secretaria</option>
+                <option value="doctora">Doctora</option>
+            </select>
+
+            <button type="submit">Crear Empleado</button>
+        </form>
+
+        <!-- Lista de empleados -->
+        <h3>Lista de Empleados</h3>
+        <ul id="empleados-list">
+            <!-- Lista de empleados -->
+        </ul>
+    </section>
+
+    <!-- Sección de Informes -->
+    <section id="informes">
+        <h2>Generar Informes</h2>
+        <button id="informe-ganancias">Descargar Informe de Ganancias</button>
+        <button id="informe-servicios">Descargar Informe de Servicios por Profesional</button>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Spa Sentirse Bien. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para manejar reservas, clientes, empleados e informes -->
+    <script src="/static/js/duena.js"></script>
+</body>
+</html>

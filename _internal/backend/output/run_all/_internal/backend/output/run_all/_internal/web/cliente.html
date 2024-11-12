@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente - Spa Sentirse Bien</title>
+    <link rel="stylesheet" href="/static/css/cliente.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido, Cliente</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#reservas">Mis Reservas</a></li>
+            <li><a href="#agendar">Agendar Cita</a></li>
+            <li><a href="#pagos">Realizar Pago</a></li>
+        </ul>
+    </nav>
+
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="slide active">
+                <img src="/static/images/combo1.jpg" alt="Promoción 1">
+                <div class="caption">Promoción Especial de Masajes</div>
+            </div>
+            <div class="slide">
+                <img src="/static/images/combo2.jpg" alt="Promoción 2">
+                <div class="caption">Descuento en Tratamientos Faciales</div>
+            </div>
+            <div class="slide">
+                <img src="/static/images/combo3.jpg" alt="Promoción 3">
+                <div class="caption">Paquete Belleza Corporal</div>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <span class="prev">&#10094;</span>
+            <span class="next">&#10095;</span>
+        </div>
+    </section>
+
+    <!-- Sección de Reservas -->
+    <section id="reservas">
+        <h2>Mis Reservas</h2>
+        <table id="reservas-table">
+            <thead>
+                <tr>
+                    <th>Servicio</th>
+                    <th>Fecha</th>
+                    <th>Cliente</th>
+                    <th>Trabajador</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las reservas se cargarán aquí -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Sección para agendar una nueva cita -->
+    <section id="agendar">
+        <h2>Agendar Nueva Cita</h2>
+        <form id="agendar-form">
+            <label for="servicio">Servicio:</label>
+            <select id="servicio" name="servicio">
+                <option value=1>Masaje</option>
+                <option value=2>Belleza</option>
+                <option value=3>Tratamiento Facial</option>
+                <option value=4>Tratamiento Corporal</option>
+            </select>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+            <button type="submit">Agendar Cita</button>
+        </form>
+
+        <p id="agendar-error" class="error-message"></p>
+    </section>
+
+    <!-- Sección de Pagos -->
+    <section id="pagos">
+        <h2>Realizar Pago</h2>
+        <form id="pago-form">
+            <label for="monto">Monto a Pagar:</label>
+            <input type="number" id="monto" name="monto" required>
+
+            <label for="ID de la reserva que desea pagar">ID de la reserva que desea pagar:</label>
+            <input type="number" id="monto" name="monto" required>
+            
+
+            <label for="metodo-pago">Método de Pago:</label>
+            <select id="metodo-pago" name="metodo-pago">
+                <option value="tarjeta_credito">Tarjeta de Crédito</option>
+                <option value="tarjeta_debito">Tarjeta de Débito</option>
+                <option value="transferencia">Transferencia Bancaria</option>
+                <option value="efectivo">Efectivo</option>
+            </select>
+            
+            <label for="xd">Numero de tarjeta:</label>
+            <input type="number" id="xd" name="xd" required>
+
+            <label for="xd">Nombre:</label>
+            <input type="text" id="xd" name="xd" required>
+
+            <label for="xd">Fecha de vencimiento:</label>
+            <input type="date" id="xd" name="xd" required>
+
+            <label for="xd">CVV:</label>
+            <input type="number" id="xd" name="xd" required>
+
+            <button type="submit" onclick="mostrarAlerta()">Realizar Pago</button>
+
+            
+        </form>
+
+        <p id="pago-error" class="error-message"></p>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Spa Sentirse Bien. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para el carrusel -->
+    <script src="/static/js/carousel2.js"></script>
+    <script src="/static/js/cliente.js"></script>
+    <script>
+        function mostrarAlerta() {
+            alert("¡Enviado con Éxito!");
+        }
+        </script>
+</body>
+</html>

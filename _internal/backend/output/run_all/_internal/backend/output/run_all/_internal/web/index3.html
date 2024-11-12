@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spa - Sentirse Bien</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <!-- Encabezado con fondo y logo -->
+    <header>
+        <div class="header-content">
+            <img src="/static/images/logo.png" alt="Logo Spa Sentirse Bien" class="logo">
+            <h1>Bienvenido a Spa - Sentirse Bien</h1>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn">Entrar a la aplicacion</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Carrusel Principal -->
+    <section class="carousel">
+        <div class="slide active">
+            <img src="images/slide1.jpg" alt="Imagen del Spa">
+            <div class="caption">
+                <h3 class="title">¿Quiénes somos?</h3>
+                <p class="description">Descubre nuestra misión y valores en cada uno de nuestros servicios.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="images/slide2.jpg" alt="Masajes en el Spa">
+            <div class="caption">
+                <h3 class="title">¿Qué deseamos?</h3>
+                <p class="description">Crear experiencias únicas y personalizadas, donde cada detalle está diseñado para que nuestros clientes logren desconectarse de la rutina y se sumerjan en un oasis de calma y relajación, en completa armonía con la naturaleza.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="images/slide3.jpg" alt="Belleza y tratamientos">
+            <div class="caption">
+                <h3 class="title">¿Qué buscamos?</h3>
+                <p class="description">Ser los referentes en bienestar, conocidos por innovar en tratamientos que no solo cuidan el cuerpo, sino que también revitalizan el espíritu, ofreciendo un refugio perfecto para la mente y el cuerpo.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="images/slide4.jpg" alt="Tratamientos faciales">
+            <div class="caption">
+                <h3 class="title">¿Cómo lo haremos?</h3>
+                <p class="description">Nos comprometemos a mantener los más altos estándares en cada servicio, asegurando que cada cliente reciba atención personalizada, utilizando productos de la mejor calidad y técnicas avanzadas en cada tratamiento.</p>
+            </div>
+        </div>
+        <!-- Botones de navegación -->
+        <div class="carousel-controls">
+            <span class="prev" onclick="prevSlide()">&#10094;</span>
+            <span class="next" onclick="nextSlide()">&#10095;</span>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios con Carruseles en filas de dos -->
+    <section class="services">
+        <h2>Nuestros Servicios</h2>
+        
+        <div class="carousel-row">
+            <div class="carousel-section">
+                <h3>Masajes</h3>
+                <div class="carousel-container" id="carousel-masajes">
+                    <div class="slide active">
+                        <img src="/static/images/masajes/masaje1.jpg" alt="Masaje 1">
+                        <p class="description">Anti-stress - Relajación y bienestar total.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/masajes/masaje2.jpg" alt="Masaje 2">
+                        <p class="description">Descontracturante - Alivia tensiones y dolores musculares.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/masajes/masaje3.jpg" alt="Masaje 3">
+                        <p class="description">Descontracturante - Alivia tensiones y dolores musculares.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/masajes/masaje4.jpg" alt="Masaje 4">
+                        <p class="description">Descontracturante - Alivia tensiones y dolores musculares.</p>
+                    </div>
+                    <div class="carousel-controls">
+                        <span class="prev">&#10094;</span>
+                        <span class="next">&#10095;</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-section">
+                <h3>Belleza</h3>
+                <div class="carousel-container" id="carousel-belleza">
+                    <div class="slide active">
+                        <img src="/static/images/belleza/belleza1.jpg" alt="Belleza 1">
+                        <p class="description">Facial Profesional - Cuida y revitaliza tu piel.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/belleza/belleza2.jpg" alt="Belleza 2">
+                        <p class="description">Manicure - Estética y cuidado de manos.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/belleza/belleza3.jpg" alt="Belleza 3">
+                        <p class="description">Manicure - Estética y cuidado de manos.</p>
+                    </div>
+                    <div class="carousel-controls">
+                        <span class="prev">&#10094;</span>
+                        <span class="next">&#10095;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-row">
+            <div class="carousel-section">
+                <h3>Tratamientos Faciales</h3>
+                <div class="carousel-container" id="carousel-faciales">
+                    <div class="slide active">
+                        <img src="/static/images/faciales/facial1.jpg" alt="Facial 1">
+                        <p class="description">Limpieza profunda para un rostro revitalizado.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/faciales/facial2.jpg" alt="Facial 2">
+                        <p class="description">Limpieza profunda para un rostro revitalizado.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/faciales/facial3.jpg" alt="Facial 3">
+                        <p class="description">Limpieza profunda para un rostro revitalizado.</p>
+                    </div>
+                    
+                    <div class="carousel-controls">
+                        <span class="prev">&#10094;</span>
+                        <span class="next">&#10095;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-section">
+                <h3>Tratamientos Corporales</h3>
+                <div class="carousel-container" id="carousel-corporales">
+                    <div class="slide active">
+                        <img src="/static/images/corporales/corporal1.jpg" alt="Corporal 1">
+                        <p class="description">Exfoliación corporal para una piel suave y luminosa.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/corporales/corporal2.jpg" alt="Corporal 2">
+                        <p class="description">Exfoliación corporal para una piel suave y luminosa.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/corporales/corporal3.jpg" alt="Corporal 3">
+                        <p class="description">Exfoliación corporal para una piel suave y luminosa.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/corporales/corporal4.jpg" alt="Corporal 4">
+                        <p class="description">Exfoliación corporal para una piel suave y luminosa.</p>
+                    </div>
+                    <div class="carousel-controls">
+                        <span class="prev">&#10094;</span>
+                        <span class="next">&#10095;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="contact">
+        <h2>Contáctanos</h2>
+        <p>Teléfono: +1 (800) 555-1234</p>
+        <p>Email: contacto@spasentirsebien.com</p>
+
+        <!-- Redes Sociales -->
+        <div class="social-media">
+            <a href="https://facebook.com/spasentirsebien" target="_blank">Facebook</a>
+            <a href="https://instagram.com/spasentirsebien" target="_blank">Instagram</a>
+            <a href="https://twitter.com/spasentirsebien" target="_blank">Twitter</a>
+        </div>
+
+        <!-- Google Maps -->
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345096164!2d144.95373531550463!3d-37.81627974202179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf57783171164f8b3!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1634549406362!5m2!1sen!2sau"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Spa Sentirse Bien. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/static/js/carousel.js"></script>
+</body>
+</html>

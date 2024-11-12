@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masajista - Spa Sentirse Bien</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de Masajista</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#citas-totales">Ver Citas Totales</a></li>
+            <li><a href="#citas-dia">Ver Citas del Día</a></li>
+            <li><a href="#historial">Historial de Servicios</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de Citas Totales -->
+    <section id="citas-totales">
+        <h2>Citas Totales</h2>
+        <table id="citas-totales-table">
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Servicio</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las citas se cargarán aquí -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Sección de Citas del Día -->
+    <section id="citas-dia">
+        <h2>Citas del Día</h2>
+        <table id="citas-dia-table">
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Servicio</th>
+                    <th>Hora</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las citas del día se cargarán aquí -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Sección de Historial -->
+    <section id="historial">
+        <h2>Historial de Servicios</h2>
+        <ul id="historial-list">
+            <!-- Historial de servicios realizados -->
+        </ul>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Spa Sentirse Bien. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para manejar citas y servicios -->
+    <script src="/static/js/masajista.js"></script>
+</body>
+</html>
